@@ -1,0 +1,76 @@
+@use "../partials/colors";
+
+@mixin maincontainer {
+  margin: -3rem 1.5rem 3rem 1.5rem;
+  box-shadow: 0px 2px 5px colors.$secondary-slate;
+  border-radius: 3px;
+  background-color: colors.$primary-white;
+
+  @media (min-width: 1020px) {
+    max-width: 1020px;
+    margin: -5rem auto;
+  }
+}
+
+@mixin mainheader {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    padding:0 1rem;
+    border-bottom: 1px solid colors.$secondary-cloud;
+  
+    @media (min-width: 768px) {
+      padding: 0 2rem;
+    }
+
+    &__nav-link {
+        padding:0;
+        margin:0;
+    }
+  
+    &__nav-icon {
+        padding:0 1rem 0 0;
+        vertical-align:middle;
+    }
+  
+    &__title {
+        flex-grow:1;
+
+    }
+}
+
+// breakpoint variables
+$tablet-breakpoint: 48rem;
+$desktop-breakpoint: 80rem;
+
+//Media queries for tablet
+@mixin tablet {
+  @media (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+// for desktop
+@mixin desktop {
+  @media (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
+
+// mixins for button style only, *size not included*
+@mixin button-primary {
+  background-color: colors.$primary-indigo;
+  height: 2.25rem;
+  border-radius: 1.25rem;
+}
+
+@mixin button-secondary {
+  background-color: colors.$primary-white;
+  height: 2.25rem;
+  border-radius: 1.25rem;
+}
+
+@mixin button-delete {
+  background-color: colors.$support-red;
+  height: 2.25rem;
+  border-radius: 1.25rem;
+}

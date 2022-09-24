@@ -1,0 +1,31 @@
+@use '../../styles/partials/mixins';
+@use '../../styles/partials/colors';
+
+.search-bar {
+    background-image: url('../../assets/icons/search-24px.svg');
+    background-repeat: no-repeat;
+    background-position: 93% center;
+    font-size: 0.813rem;
+    line-height: 1.25rem;
+    height: 2.25rem;
+    width: 100%;
+    padding: 0 1rem 0 1rem;
+    border-radius: 1.25rem;
+    border: solid 0.063rem colors.$secondary-cloud;
+
+
+    @include mixins.tablet {
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+        height: 2.375rem;
+        min-width: 9.083rem;
+        margin-right: 1rem;
+    }
+    @include mixins.desktop {
+        min-width: 17.125rem;
+    }
+}
+
+.active-state {
+    outline: solid 0.063rem colors.$primary-indigo;
+  }

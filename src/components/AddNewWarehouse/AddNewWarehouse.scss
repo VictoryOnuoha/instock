@@ -1,0 +1,147 @@
+@use "../../styles/partials/colors";
+@use "../../styles/partials/fonts";
+@use "../../styles/partials/mixins";
+
+.main-container {
+  @include mixins.maincontainer;
+}
+
+.main-heading {
+  @include mixins.mainheader;
+}
+
+.warehouse-form {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  &__section {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    flex-grow: 1;
+    border: none;
+    border-top: 1px solid colors.$secondary-cloud;
+    padding: 1rem 1rem;
+    margin: 0;
+
+    @media (min-width: 768px) {
+      flex-basis: 49%;
+      border-top: 0;
+      padding: 0 2rem;
+      margin: 1rem 0 2rem 0;
+    }
+
+    &--details {
+      @media (min-width: 768px) {
+        border-right: 1px solid colors.$secondary-cloud;
+      }
+    }
+  }
+
+  &__label {
+    display: block;
+    color: colors.$primary-black;
+    margin: 0.5rem 0;
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    height: 2rem;
+    margin-top: 0.5rem;
+    border-radius: 20px;
+    border: 1px solid colors.$secondary-cloud;
+    line-height: 2rem;
+    padding: 0 1rem;
+    font-family: "Titillium Web";
+
+    &:active,
+    &:focus {
+      border: 1px solid colors.$primary-indigo;
+      outline: none;
+    }
+
+    &--invalid {
+      border-color: colors.$support-red;
+    }
+  }
+
+  &__error {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+  }
+
+  &__error-icon {
+    height: 1rem;
+    margin-right: 0.5rem;
+  }
+
+  &__error-message {
+    margin: 0;
+    font-size: 0.9rem;
+    color: colors.$support-red;
+  }
+
+  &__button-wrapper {
+    background-color: colors.$background-light-grey;
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 1rem;
+    gap: 1rem;
+
+    @media (min-width: 768px) {
+      flex-basis: 100%;
+      padding: 1rem 2rem;
+    }
+  }
+
+  &__button {
+    flex-basis: 50%;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+
+    @media (min-width: 768px) {
+      flex-basis: auto;
+      padding: 0.5rem 2rem;
+    }
+    &--cancel {
+      background-color: colors.$primary-white;
+      border: 1px solid colors.$secondary-cloud;
+      font-weight: 600;
+      color: colors.$secondary-slate;
+    }
+
+    &--CTA-2 {
+      background-color: colors.$primary-indigo;
+      color: colors.$primary-white;
+      border: 1px solid colors.$primary-indigo;
+      font-weight: 600;
+
+      &:disabled {
+        border-color: colors.$secondary-cloud;
+        background-color: colors.$background-light-grey;
+        color: colors.$secondary-cloud;
+        cursor: not-allowed;
+
+        &:hover {
+          background-color: colors.$background-light-grey;
+          border: 1px solid colors.$secondary-cloud;
+        }
+      }
+
+      &:hover {
+        background-color: colors.$background-graphite;
+        border: none;
+      }
+    }
+  }
+}

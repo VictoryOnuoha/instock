@@ -1,0 +1,20 @@
+@use './styles/partials/mixins';
+
+.page__wrapper {
+    display:block;
+    min-height:100vh;
+}
+
+h1 {
+    font-size:1.75rem;
+    line-height:2rem;
+
+    @include mixins.tablet {
+        font-size:2rem;
+        line-height:2.25rem;
+    }
+}
+
+a {
+    text-decoration: none;
+}

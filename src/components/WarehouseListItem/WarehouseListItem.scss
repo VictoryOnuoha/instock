@@ -1,0 +1,174 @@
+@use '../../styles/partials/mixins';
+@use '../../styles/partials/colors';
+
+.warehouse-list-item {
+    padding: 1rem 1.5rem 0 1.5rem;
+    border-top: 0.063rem solid colors.$secondary-cloud;
+
+    &:hover {
+        background-color: rgba(46, 102, 230, 0.07);
+    }
+
+    @include mixins.tablet {
+        display: flex;
+        padding: 1rem 2rem 1rem 2rem;
+    }
+    @include mixins.desktop {
+        padding: 1.25rem 2.5rem 1.25rem 2.5rem;
+    }
+}
+
+.warehouse-info {
+    display: flex;
+
+    h4 {
+        margin: 0 0 0.4rem 0;
+        text-transform: uppercase;
+        color: colors.$secondary-slate;
+        font-size: 0.688rem;
+        font-weight: 600;
+        line-height: 1rem;
+
+        @include mixins.tablet {
+            display: none;
+        }
+    }
+
+    p {
+        margin: 0;
+        font-size: 0.813rem;
+        line-height: 1.25rem;
+
+        @include mixins.tablet {
+            font-size: 0.875rem;
+            line-height: 1.375rem;
+        }
+        @include mixins.desktop {
+            font-size: 1rem;
+        }
+    }
+
+    &__name-address {
+        inline-size: 53%;
+
+        div:first-child {
+            margin-bottom: 1.3rem;
+
+            @include mixins.tablet {
+                margin-bottom: 0;
+                inline-size: 53.84565485%;
+            }
+            @include mixins.desktop {
+                inline-size: 46.01025641%;
+            }
+        }
+
+        a {
+            display: flex;            
+        }
+
+        p {
+            &:first-child {
+                color: colors.$primary-indigo;
+                font-weight: 600;
+
+                &:hover {
+                    text-decoration: underline colors.$primary-indigo;
+                }
+            }
+
+            &:nth-child(2) {
+                width: 7.525rem;
+
+                @include mixins.tablet {
+                    width: 6.3rem;
+                }
+                @include mixins.desktop {
+                    width: 15rem;
+                }
+            }
+        }
+
+        img {
+            width: 1.25rem;
+
+            @include mixins.tablet {
+                margin-left: 0.281rem;
+            }
+        }
+
+        @include mixins.tablet {
+            display: flex;
+            inline-size: 45.5%;
+            align-items: center;
+        }
+
+        @include mixins.desktop {
+            inline-size: 53.25%;
+        }
+    }
+
+    &__contacts {
+        div:first-child {
+            margin-bottom: 1.3rem;
+
+            @include mixins.tablet {
+                margin-bottom: 0;
+                inline-size: 38.52767107%;
+            }
+
+            @include mixins.desktop {
+                inline-size: 42.77679482%;
+            }
+        }
+
+        @include mixins.tablet {
+            display: flex;
+            inline-size: 54.5%;
+            align-items: center;
+        }
+
+        @include mixins.desktop {
+            inline-size: 46.75%;
+        }
+    }
+
+    @include mixins.tablet {
+        inline-size: 90%;
+    }
+    @include mixins.desktop {
+        inline-size: 93.5%;
+    }
+}
+
+.warehouse-actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.3rem 0.063rem 1.5rem 0.063rem;
+
+    img {
+        @include mixins.tablet {
+            width: 100%;
+            max-width: 24px;
+            height: auto;
+            margin-left: 1rem;
+        }
+    }
+    a {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    @include mixins.tablet {
+        justify-content: flex-end;
+        padding: 0;
+        inline-size: 10%;
+    }
+    @include mixins.desktop {
+        inline-size: 6.5%;
+    }
+}
+
+.delete__icon{
+    cursor:pointer
+}

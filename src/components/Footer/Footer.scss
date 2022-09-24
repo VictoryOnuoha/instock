@@ -1,0 +1,26 @@
+@use '../../styles/partials/colors';
+@use '../../styles/partials/mixins';
+
+.footer {
+    display: flex;
+    justify-content: center;
+    height:3rem;
+    padding: 1.5rem 0 1.5rem 0;
+    color: colors.$secondary-slate;
+
+    &__text { //p3
+        font-size: 0.688rem;
+        line-height: 1rem;
+        margin-top: 6rem;
+        padding: 1rem;
+
+        @include mixins.tablet {
+            font-size: 0.75rem;
+            line-height: 1.125rem;
+        }
+    }
+
+    span {
+        font-size: 0.7rem;
+    }
+}

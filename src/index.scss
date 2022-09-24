@@ -1,0 +1,18 @@
+@use './styles/partials/fonts';
+@use './styles/partials/colors';
+
+/*Global Styles*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family:'Titillium Web';
+    background-color: colors.$background-light-grey;
+}
+
+
+

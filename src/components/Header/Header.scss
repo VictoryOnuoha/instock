@@ -1,0 +1,85 @@
+@use "../../styles/partials/colors";
+@use "../../styles/partials/fonts";
+@use "../../styles/partials/mixins";
+
+.header {
+  background-color: colors.$background-graphite;
+  height: 12.5rem;
+
+  &__container {
+    max-width: 1020px;
+    margin: 0 auto;
+    padding: 1.5rem 0 0 0;
+
+    @include mixins.tablet {
+      padding: 2rem 0.2rem 0 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    @include mixins.desktop {
+      padding: 1.5rem 0 0 0;
+    }
+  }
+
+  &__image-container {
+    display: block;
+    text-align: center;
+    margin-bottom: .5rem;
+    @include mixins.tablet {
+      margin-bottom: 0;
+    }
+  }
+  &__image {
+    height: 1.8rem;
+  }
+
+  &__navigation {
+    margin: 0 1rem;
+  }
+
+  &__nav-list {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    
+  
+  }
+
+  &__nav-list-link {
+    flex-grow: 1;
+    flex-basis: 100%;
+    text-align: center;
+    color: colors.$secondary-cloud;
+    padding:0.5rem 0;
+
+    @include mixins.tablet {
+      padding: 0.5rem 1rem;
+    }
+
+    &:hover {
+      text-decoration: underline;
+      color: colors.$primary-white;
+    }
+
+    &--active {
+      background-color: colors.$primary-black;
+      color: colors.$primary-white;
+      border-radius: 20px;
+    }
+  }
+
+  &__nav-list-item {
+    list-style-type: none;
+    font-family: "Titillium Web";
+    font-weight: 600;
+    padding: 0;
+    font-size: 0.9375rem;
+    
+    @include mixins.tablet {
+      font-size: 1.2rem;
+    }
+  }
+}

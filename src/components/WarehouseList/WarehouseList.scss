@@ -1,0 +1,185 @@
+@use '../../styles/partials/mixins';
+@use '../../styles/partials/colors';
+
+.warehouse-list {
+    margin: 0 1rem 0 1rem;
+    background-color: colors.$primary-white;
+    z-index: 1;
+    position: relative;
+    bottom: 4.1rem;
+    border-radius: 0.188rem;
+    box-shadow: 0 0.125rem 0.313rem rgba(19, 24, 44, 0.1);
+
+    &__header {
+        padding: 0 1.5rem 0 1.5rem;
+        
+        h1 {
+            font-size: 1.75rem;
+            line-height: 2.25rem;
+            margin-top: 0;
+            padding-top: 2.1rem;
+
+            @include mixins.tablet {
+                font-size: 2rem;
+                line-height: 2.5rem;
+                padding: 1.8rem 0 0 0;
+                margin: 0;
+                inline-size: 41.5%;
+            }
+
+            @include mixins.desktop {
+                inline-size: 49.5%;
+            }
+        }
+
+        @include mixins.tablet {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem 0 2rem;
+        } 
+        @include mixins.desktop {
+            padding: 0 2.5rem 0 2.5rem; 
+        }  
+    }
+
+    &__headings {
+        display: none;
+
+        p {
+            @include mixins.tablet {
+                padding: 0.688rem 0;
+                margin: 0;
+                font-size: 0.75rem;
+                font-weight: 600;
+                line-height: 1.125rem;
+                text-transform: uppercase;
+                color: colors.$secondary-slate;
+            }
+            @include mixins.desktop {
+                font-size: 1rem;
+            }
+        }
+    
+        img {
+            @include mixins.tablet {
+                width: 1rem;
+                margin-left: 0.25rem; 
+            }
+        }
+
+        @include mixins.tablet {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 2rem 0 2rem;
+            margin-top: 1.65rem;
+            background-color: colors.$background-light-grey;
+        }
+        @include mixins.desktop {
+            padding: 0 2.5rem 0 2.5rem;
+        }
+    }
+
+    &__items {
+        article:first-child {
+            @include mixins.tablet {
+                border-top: none;
+            }
+        }
+    }
+
+    @include mixins.tablet {
+        margin: 1rem 2rem 0 2rem;
+        bottom: 4rem;
+    }
+
+    @include mixins.desktop {
+        margin: 1rem 6rem 6rem 6rem;   
+    }
+}
+
+.warehouse-list-nav {
+    display: flex;
+    flex-direction: column;
+
+    &__button {
+        display: flex;
+        align-items: center;   
+        justify-content: center;
+        background-color: colors.$primary-indigo;
+        font-size: 0.813rem;
+        font-weight: 600;
+        line-height: 1.25rem;
+        height: 2.25rem;
+        width: 100%;
+        padding: 0 1rem 0 1rem;
+        margin: 1rem 0 1.6rem 0;
+        border-radius: 1.25rem;
+        border: none;
+        color: colors.$primary-white;
+        cursor:pointer;
+
+        &:hover {
+            background-color: colors.$background-graphite;
+            cursor: pointer;
+        }
+
+        @include mixins.tablet {
+            font-size: 0.875rem;
+            line-height: 1.375rem;
+            margin: 0;
+            height: 2.375rem;
+            min-width: 11.438rem;
+        }
+    }
+
+    @include mixins.tablet {
+        flex-direction: row;
+        padding: 1.8rem 0 0 0;
+        inline-size: 60%;
+        
+    }
+    @include mixins.desktop {
+        inline-size: 50.5%;
+        
+    }
+}
+
+.headings-container-1 {
+    div {
+        &:first-child {
+            @include mixins.tablet {
+                inline-size: 24.5%;
+            }
+        }
+        &:nth-child(2) {
+            @include mixins.tablet {
+                inline-size: 21%;
+            }
+            @include mixins.desktop {
+                inline-size: 28.75%;
+            }
+        }
+        &:nth-child(3) {
+            @include mixins.tablet {
+                inline-size: 21%;
+            }
+            @include mixins.desktop {
+                inline-size: 20%;
+            }
+        }
+
+        @include mixins.tablet {
+            display: flex;
+        }
+    }
+
+    @include mixins.tablet {
+        display: flex;
+        inline-size: 90%;
+    }
+
+    @include mixins.desktop {
+        inline-size: 93.5%;
+    }
+}

@@ -1,0 +1,271 @@
+@use "../../styles/partials/colors";
+@use "../../styles/partials/fonts";
+@use "../../styles/partials/mixins";
+
+.details {
+    margin: 1rem;
+    border: 0.01rem solid colors.$primary-white;
+    box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+    background-color: colors.$primary-white;
+    z-index: 1;
+    position: relative;
+    bottom: 5.2rem;
+    border-radius: 0.25rem;
+    @include mixins.tablet {
+        margin: 1rem 2rem 2rem 2rem;
+        bottom: 7.45rem;
+    }
+    @include mixins.desktop {
+        margin: 1rem 6rem 6rem 6rem;
+    }
+
+&__title-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 0.01rem solid colors.$secondary-cloud;
+}
+&__title-row1 {
+    width: 85%;
+    display: flex;
+    padding-left: 1rem;
+
+    img {
+        margin-top: 2.5rem;
+    }
+}
+&__title {
+    padding-left: 0.5rem;
+    padding-top: 0.4rem;
+    font-size: 1.75rem;
+    @include mixins.tablet {
+        font-size: 2rem ;
+        padding-top: 0;
+    }
+}
+&__title-row2 {
+    width: 15%;
+    padding-left: 0.5rem;
+
+    img {
+        margin-top: 0.9rem;
+    }
+}
+
+&__address {
+    border-bottom: 0.01rem solid colors.$secondary-cloud;
+    @include mixins.tablet {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+    @include mixins.desktop {
+        justify-content: flex-start;
+    }
+}
+&__address-box {
+    margin-left: 2rem;
+    @include mixins.tablet {
+        margin: 0 5rem 0 0;
+    }
+    @include mixins.desktop {
+        margin: 0 12rem 0 3rem;
+    }
+}
+&__address-title {
+    font-size: 0.6875rem;
+    color: colors.$secondary-slate;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+&__address-location {
+    font-size: 0.8125rem;
+    margin-top: 0;
+    @include mixins.tablet {
+        font-size:0.875rem;
+    }
+}
+
+&__manager {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 1rem;
+    @include mixins.tablet {
+        padding-left: 3rem;
+        border-left: 0.01rem solid colors.$secondary-cloud ;
+    }
+}
+&__manager-box {
+    margin-right: 1rem;
+}
+&__manager-contact,
+&__contact-info {
+    font-size: 0.6875rem;
+    color: colors.$secondary-slate;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    @include mixins.tablet {
+        font-size: 0.75rem;
+    }
+}
+
+&__manager-name,
+&__manager-title,
+&__contact-number,
+&__contact-email {
+    font-size: 0.8125rem;
+    margin: 0;
+    @include mixins.tablet {
+        font-size: 0.875rem;
+    }
+}
+
+&__sort-arrows {
+    display: none;
+    @include mixins.tablet {
+        display: inline ;
+    }
+}
+&__inventory {
+    display: flex;
+   flex-wrap: wrap;
+   padding-left: 1rem;
+   margin-bottom: 1rem;
+   border-bottom: 0.01rem solid colors.$secondary-cloud;
+   width: 100%;
+   @include mixins.tablet {
+    padding: 1rem 0 0 0;
+    flex-wrap: nowrap;
+   }
+}
+&__inventory-box{
+    width: 50%;
+    padding-left: 1rem;
+
+    @include mixins.tablet {
+        width: 25%;
+    }
+}
+
+&__header {
+    @include mixins.tablet {
+        display: flex;
+        justify-content: center;
+        background-color: rgba(247, 248, 249, 0.7);
+    }  
+}
+&__header--selected {
+    margin-top: 0.2rem;
+}
+&__inventory-title p {
+    margin-top: 0.2rem;
+}
+
+&__inventory-title,
+&__category,
+&__inventory-status,
+&__quantity,
+&__inventory-action {
+    font-size: 0.6875rem;
+    color: colors.$secondary-slate;
+    font-weight: bold;
+    @include mixins.tablet {
+        padding: 0.5rem;
+        font-size: 0.75rem;
+    }
+}
+
+&__inventory-item {
+    color: colors.$primary-indigo;
+    font-size: 0.8125rem;
+    font-weight: bold;
+}
+
+&__inventory-message {
+    height: 1.5rem;
+    width: 6rem;
+    font-size: 0.8125rem;
+    font-weight: bold;
+    padding: 0 0.5rem 0 0.5rem;
+    border-radius: 1.25rem;
+    text-align:center;
+
+    &--instock{
+        background-color: rgba(21, 132, 99, 0.07);
+        color: colors.$support-green;
+    }
+
+    &--outofstock{
+        background-color: rgba(201, 69, 21, 0.07);
+        color: colors.$support-red;
+    }
+}
+&__category-item,
+&__quantity-item {
+    font-size: 0.8125rem;
+}
+&__inventory-item,
+&__inventory-message,
+&__category-item,
+&__quantity-item {
+    margin-top: 0;
+    @include mixins.tablet {
+        font-size: 0.875rem;
+    }
+}
+
+&__item-box {
+    display: flex;
+}
+
+&__item-box,
+&__stock-box,
+&__category-item,
+&__quantity-item {
+    @include mixins.tablet {
+        padding: 1rem 0 0 4rem;
+    }
+}
+
+&__inventory-title,
+&__inventory-status,
+&__category,
+&__quantity{
+    margin-bottom: 0;
+}
+
+&__inventory-box{
+    display: block;
+    padding-left: 0;
+}
+
+&__inventory-icon {
+    display: block;
+    width: 100%;
+       
+    @include mixins.tablet {
+        width: 20%;
+    }
+}
+&__inventory-action {
+    display: none;
+    @include mixins.tablet {
+        display: flex;
+        background-color: rgba(247, 248, 249, 0.7);
+        margin-top: 0;
+        padding-bottom: 0.7rem;
+    }
+}
+&__action-icons {
+    @include mixins.tablet {
+        display: flex;
+    }
+}
+&__edit-icon {
+    margin-left: 12rem;
+    @include mixins.tablet {
+        margin-left: 2rem;
+    }
+}
+
+}
