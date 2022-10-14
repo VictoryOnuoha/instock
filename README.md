@@ -21,7 +21,7 @@ $ git clone https://github.com/DaGitGuy/m22todm1-instock.git
 $ git clone git@github.com:DaGitGuy/m22todm1-instock.git
 
 Go into the repository:
-$ cd m22todm1-instock
+$ cd instock
 
 Install dependencies:
 $ npm install
@@ -35,3 +35,6 @@ $ npm start
 
 Run the app in the development mode. 
 Open http://localhost:3000 to view application in the browser.
+
+##LIVE PREVIEW 
+![inventory home page ](https://user-images.githubusercontent.com/34638854/195742056-f8b91ad5-3b6e-4a9c-9b73-c7731fb2c655.png)
